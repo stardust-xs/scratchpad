@@ -20,7 +20,10 @@ repeat
 starmap
 takewhile
 tee
-zip_longest
+zip_longest:
+    Zip multiple iterables together but considers only iterable with
+    maximum length.
+    Takes two args at most, *args and fillvalue.
 
 """
 import itertools as i
@@ -51,3 +54,12 @@ import itertools as i
 #     if d < -20:
 #         break
 #     print(d, end=" ") -> 2 0 -2 -4 -6 -8 -10 -12 -14 -16 -18 -20
+
+# zip_longest()
+# -------------
+# x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# a = ["a", "b", "c", "d", "e"]
+
+# print([*zip(x, a)]) -> [(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd'), (4, 'e')]
+# print([*i.zip_longest(x, a)]) -> [(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd'), (4, 'e'), (5, None), (6, None), (7, None), (8, None), (9, None)]
+# print([*i.zip_longest(x, a, fillvalue="XA")]) -> [(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd'), (4, 'e'), (5, 'XA'), (6, 'XA'), (7, 'XA'), (8, 'XA'), (9, 'XA')]
