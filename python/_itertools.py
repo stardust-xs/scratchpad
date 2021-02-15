@@ -7,9 +7,10 @@ combinations
 combinations_with_replacement
 compress
 count:
-    Creates an infinite counter.
+    One of the infinite iterable and creates an infinite counter.
     Takes two args at most, start and step.
 cycle:
+    One of the infinite iterable.
     Takes an iterator and loops it forever.
 dropwhile
 filterfalse
@@ -27,7 +28,7 @@ zip_longest:
     Takes two args at most, *args and fillvalue.
 
 """
-import itertools as i
+# import itertools as i
 
 # count()
 # -------
@@ -62,11 +63,14 @@ import itertools as i
 # a = ["a", "b", "c", "d", "e"]
 
 # print([*zip(x, a)]) -> [(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd'), (4, 'e')]
-# print([*i.zip_longest(x, a)]) -> [(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd'), (4, 'e'), (5, None), (6, None), (7, None), (8, None), (9, None)]
-# print([*i.zip_longest(x, a, fillvalue="XA")]) -> [(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd'), (4, 'e'), (5, 'XA'), (6, 'XA'), (7, 'XA'), (8, 'XA'), (9, 'XA')]
+# print([*i.zip_longest(x, a)]) -> [(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd'),
+# (4, 'e'), (5, None), (6, None), (7, None), (8, None), (9, None)]
+# print([*i.zip_longest(x, a, fillvalue="XA")]) -> [(0, 'a'), (1, 'b'),
+# (2, 'c'), (3, 'd'), (4, 'e'), (5, 'XA'), (6, 'XA'), (7, 'XA'), (8, 'XA'),
+# (9, 'XA')]
 
 # cycle()
-# -------------
+# -------
 # x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 # c = i.cycle(x)
 # print(next(c)) -> 0
@@ -97,3 +101,12 @@ import itertools as i
 # print("Stop!")
 
 # 0 1 2 3 ... 0 1 Stop!
+
+# switch = ("On", "Off")
+# s = i.cycle(switch)
+# print(next(s)) -> On
+# print(next(s)) -> Off
+# print(next(s)) -> On
+# print(next(s)) -> Off
+# print(next(s)) -> On
+# print(next(s)) -> Off
