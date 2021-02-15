@@ -18,7 +18,10 @@ groupby
 islice
 permutations
 product
-repeat
+repeat:
+    One of the infinite iterable.
+    Repeats value indefinitely.
+    Takes two args at most, object and times.
 starmap
 takewhile
 tee
@@ -28,7 +31,7 @@ zip_longest:
     Takes two args at most, *args and fillvalue.
 
 """
-# import itertools as i
+import itertools as i
 
 # count()
 # -------
@@ -99,7 +102,6 @@ zip_longest:
 #     if d > 100:
 #         break
 # print("Stop!")
-
 # 0 1 2 3 ... 0 1 Stop!
 
 # switch = ("On", "Off")
@@ -110,3 +112,26 @@ zip_longest:
 # print(next(s)) -> Off
 # print(next(s)) -> On
 # print(next(s)) -> Off
+
+
+# repeat()
+# --------
+
+# r = i.repeat(5)
+# print(next(r)) -> 5
+# print(next(r)) -> 5
+# print(next(r)) -> 5
+# print(next(r)) -> 5
+# print(next(r)) -> 5
+# print(next(r)) -> 5
+# print(next(r)) -> 5
+# print(next(r)) -> 5
+
+# r = i.repeat(None, times=5)
+# print(next(r)) -> None
+# print(next(r)) -> None
+# print(next(r)) -> None
+# print(next(r)) -> None
+# print(next(r)) -> None
+# print(next(r)) -> Traceback (most recent ... StopIteration after times value
+# print(next(r)) -> Not executed
