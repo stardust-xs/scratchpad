@@ -136,5 +136,12 @@ import itertools as i
 # print(next(r)) -> Traceback (most recent ... StopIteration after times value
 # print(next(r)) -> Not executed
 
+# Normal
 # print(*list(map(pow, range(10), i.repeat(2)))) -> 0 1 4 9 16 25 36 49 64 81
+
+# With lambda
 # print(*list(map(lambda x, y: x + y, range(10), i.repeat(5)))) -> 5 6 7 8 9 10 11 12 13 14
+
+# With function definition
+# def f(x, y): return x + y
+# print(*tuple(map(f, range(10), i.repeat(1)))) -> 1 2 3 4 5 6 7 8 9 10
