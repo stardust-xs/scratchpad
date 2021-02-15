@@ -135,3 +135,5 @@ import itertools as i
 # print(next(r)) -> None
 # print(next(r)) -> Traceback (most recent ... StopIteration after times value
 # print(next(r)) -> Not executed
+
+# print(*list(map(pow, range(10), i.repeat(2)))) -> 0 1 4 9 16 25 36 49 64 81
