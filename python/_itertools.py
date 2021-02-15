@@ -9,7 +9,8 @@ compress
 count:
     Creates an infinite counter.
     Takes two args at most, start and step.
-cycle
+cycle:
+    Takes an iterator and loops it forever.
 dropwhile
 filterfalse
 groupby
@@ -63,3 +64,36 @@ import itertools as i
 # print([*zip(x, a)]) -> [(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd'), (4, 'e')]
 # print([*i.zip_longest(x, a)]) -> [(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd'), (4, 'e'), (5, None), (6, None), (7, None), (8, None), (9, None)]
 # print([*i.zip_longest(x, a, fillvalue="XA")]) -> [(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd'), (4, 'e'), (5, 'XA'), (6, 'XA'), (7, 'XA'), (8, 'XA'), (9, 'XA')]
+
+# cycle()
+# -------------
+# x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# c = i.cycle(x)
+# print(next(c)) -> 0
+# print(next(c)) -> 1
+# print(next(c)) -> 2
+# print(next(c)) -> 3
+# print(next(c)) -> 4
+# print(next(c)) -> 5
+# print(next(c)) -> 6
+# print(next(c)) -> 7
+# print(next(c)) -> 8
+# print(next(c)) -> 9
+# print(next(c)) -> 0
+# print(next(c)) -> 1
+# print(next(c)) -> 2
+# print(next(c)) -> 3
+# print(next(c)) -> 4
+# print(next(c)) -> 5
+# print(next(c)) -> 6
+# print(next(c)) -> 7
+# print(next(c)) -> 8
+# print(next(c)) -> 9
+
+# for d, v in enumerate(c):
+#     print(v)
+#     if d > 100:
+#         break
+# print("Stop!")
+
+# 0 1 2 3 ... 0 1 Stop!
