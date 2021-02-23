@@ -22,7 +22,8 @@ repeat:
     One of the infinite iterable.
     Repeats value indefinitely.
     Takes two args at most, object and times.
-starmap
+starmap:
+    Modifies the map to use "zipped" arguments to the function.
 takewhile
 tee
 zip_longest:
@@ -137,11 +138,17 @@ import itertools as i
 # print(next(r)) -> Not executed
 
 # Normal
-# print(*list(map(pow, range(10), i.repeat(2)))) -> 0 1 4 9 16 25 36 49 64 81
+# *list(map(pow, range(10), i.repeat(2))) -> 0 1 4 9 16 25 36 49 64 81
 
 # With lambda
-# print(*list(map(lambda x, y: x + y, range(10), i.repeat(5)))) -> 5 6 7 8 9 10 11 12 13 14
+# *list(map(lambda x, y: x + y, range(5), i.repeat(5))) -> 5 6 7 8 9 10
 
 # With function definition
 # def f(x, y): return x + y
-# print(*tuple(map(f, range(10), i.repeat(1)))) -> 1 2 3 4 5 6 7 8 9 10
+# *tuple(map(f, range(10), i.repeat(1))) -> 1 2 3 4 5 6 7 8 9 10
+
+# Random test with Itertools.repeat()
+# def dumb(a, b, c, d=0):
+#     return a + b + c
+# Where a and b are positional arguments and C is a Constant
+# print(*tuple(map(dumb, range(5), range(5), i.repeat(5))))
