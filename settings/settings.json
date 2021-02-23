@@ -1,0 +1,94 @@
+{
+    "[markdown]": {
+        "editor.insertSpaces": true,
+        "editor.quickSuggestions": false,
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[plaintext]": {
+        "editor.quickSuggestions": false
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.detectIndentation": false,
+        "editor.fontLigatures": true,
+        "editor.insertSpaces": true,
+        "editor.rulers": [
+            72,
+            79
+        ],
+        "editor.tabSize": 4,
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 79
+    },
+    "breadcrumbs.enabled": false,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.executorMap": {
+        "python": "$pythonPath -u $fullFileName"
+    },
+    "code-runner.ignoreSelection": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.showExecutionMessage": false,
+    "diffEditor.renderSideBySide": true,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.codeActionsOnSave": {},
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorStyle": "line",
+    "editor.fontLigatures": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "editor.snippetSuggestions": "top",
+    "editor.suggestSelection": "first",
+    "editor.trimAutoWhitespace": true,
+    "editor.wordWrap": "off",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.sortOrder": "type",
+    "files.associations": {
+        "*.extension": "language"
+    },
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 250,
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.git": true,
+        "**/.pytest_cache": true,
+        "**/*.asset-cache": true,
+        "**/*.cache": true,
+        "**/*.egg-info": true,
+        "**/*.pyc": true,
+        "**/tmp": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableCommitSigning": true,
+    "jupyter.sendSelectionToInteractiveWindow": true,
+    "notebook.kernelProviderAssociations": [],
+    "python.analysis.extraPaths": [],
+    "python.analysis.logLevel": "Information",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.autoComplete.addBrackets": true,
+    "python.autoComplete.extraPaths": [],
+    "python.formatting.autopep8Args": [
+        "--indent-size=4"
+    ],
+    "python.formatting.provider": "black",
+    "python.languageServer": "Jedi",
+    "python.linting.enabled": true,
+    "python.showStartPage": false,
+    "spellright.spellContext": "Kaamiki kaamiki",
+    "terminal.integrated.rendererType": "canvas",
+    "workbench.colorTheme": "Monokai",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.settings.editor": "json",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.tree.indent": 20,
+    "markdown.extension.toc.updateOnSave": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+}
