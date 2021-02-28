@@ -20,25 +20,27 @@ alias uninstall='sudo apt remove --purge -y'
 alias clean='sudo apt autoremove -y && sudo apt autoclean -y && sudo apt clean -y'
 
 # CD navigations aliases
-alias ..='cd ..' 
+alias ..='cd ..'
 alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
-# Directory navigations aliases - To be updated
-alias brc='cat ~/.bashrc'
-alias mkdir='mkdir -pv'
-alias repo='cd ~/workshop/repositories/'
-
-# Flags aliases
+# Common aliases
+alias cls='clear'
 alias df='df -h'                                # Human readable disk spaces
 alias free='free -h'                            # Free RAM in human readable format
 alias freem='free -m'                           # Free RAM in MB
 alias freeg='free -g'                           # Free RAM in GB
+alias ls='ls -lAhSpg --color=auto'              # ls -l -A (skip ./ and ../) -h (human readable sizes) -S (sort by file size) -p (add dir indicator) -g (hide owner)
+
+# Directory navigations aliases - To be updated
+alias brc='cat ~/.bashrc'
+alias home='cd $HOME/'
+alias mkdir='mkdir -pv'
+alias repo='cd ~/workshop/repositories/'
 
 # Git aliases
-alias stat='git status'                         # 'status' is a protected name so using 'stat' instead
 alias add='git add'
 alias adda='git add -A'
 alias branch='git branch'
@@ -48,10 +50,8 @@ alias commit='git commit -m'
 alias fetch='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
-
-# LS aliases
-alias ls='ls -lAhSpg --color=auto'              # ls -l -A (skip ./ and ../) -h (human readable sizes) -S (sort by file size) -p (add dir indicator) -g (hide owner)
+alias stat='git status'                         # 'status' is a protected name so using 'stat' instead
 
 # Python aliases
 alias py='python3'
-alias pip='pip3'
+alias pip="pip3"
