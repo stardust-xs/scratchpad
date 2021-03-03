@@ -1,5 +1,14 @@
 # --- Personal preferences ---
-# To run password less sudo run: sudo bash -c 'echo "$(logname) ALL=(ALL:ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)'
+# To run password less sudo run:
+# sudo bash -c 'echo "$(logname) ALL=(ALL:ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)'
+
+# PS1 command to add line break so that the commands are typed on a new line:
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;92m\]\u\[\033[00m\]:\[\033[01;94m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u:\w\$ '
+fi
+unset color_prompt force_color_prompt
 
 # To setup virtual environments:
 # 1. Install virtualenv package: pip3 install virtualenv virtualenvwrapper --no-warn-script-location
