@@ -4,9 +4,9 @@
 
 # PS1 command to add line break so that the commands are typed on a new line:
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;92m\]\u\[\033[00m\]:\[\033[01;94m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;92m\]\u\[\033[00m\]:\[\033[01;94m\]\w\[\033[00m\]\n\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u:\w\n\$ '
 fi
 unset color_prompt force_color_prompt
 
