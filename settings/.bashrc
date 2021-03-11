@@ -44,9 +44,7 @@ alias freeg='free -g'                           # Free RAM in GB
 alias ls='ls -lAhSpg --color=auto'              # ls -l -A (skip ./ and ../) -h (human readable sizes) -S (sort by file size) -p (add dir indicator) -g (hide owner)
 
 # Directory navigations aliases - To be updated
-alias brc='cat ~/.bashrc'
 alias home='cd $HOME/'
-alias mkdir='mkdir -pv'
 alias repo='cd ~/workshop/repositories/'
 
 # Git aliases
@@ -61,6 +59,11 @@ alias pull='git pull origin'
 alias push='git push origin'
 alias stat='git status'                         # 'status' is a protected name so using 'stat' instead
 
+# Other aliases
+alias brc='cat ~/.bashrc'
+alias mkdir='mkdir -pv'
+
 # Python aliases
 alias py='python3'
-alias pip="pip3"
+alias pip='python3 -m pip'
+alias venv='mkvirtualenv'
