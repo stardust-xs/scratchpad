@@ -1,9 +1,12 @@
 {
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
     "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.insertSpaces": true,
         "editor.quickSuggestions": false,
-        "editor.tabSize": 4,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.tabSize": 4
     },
     "[plaintext]": {
         "editor.quickSuggestions": false
@@ -51,44 +54,52 @@
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 250,
     "files.exclude": {
-        "**/__pycache__": true,
-        "**/.git": true,
-        "**/.pytest_cache": true,
         "**/*.asset-cache": true,
         "**/*.cache": true,
         "**/*.egg-info": true,
         "**/*.pyc": true,
+        "**/.git": true,
+        "**/.pytest_cache": true,
+        "**/__pycache__": true,
         "**/tmp": true
     },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "git.autofetch": true,
-    "git.confirmSync": false,
+    "git.confirmSync": true,
     "git.enableCommitSigning": true,
     "jupyter.sendSelectionToInteractiveWindow": true,
+    "markdown.extension.toc.updateOnSave": false,
     "notebook.kernelProviderAssociations": [],
-    "python.analysis.extraPaths": [],
     "python.analysis.logLevel": "Information",
-    "python.analysis.typeCheckingMode": "basic",
     "python.autoComplete.addBrackets": true,
     "python.autoComplete.extraPaths": [],
     "python.formatting.autopep8Args": [
         "--indent-size=4"
     ],
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "79"
+    ],
     "python.formatting.provider": "black",
     "python.languageServer": "Jedi",
     "python.linting.enabled": true,
     "python.showStartPage": false,
+    "python.sortImports.args": [
+        "-sl"
+    ],
     "spellright.spellContext": "Kaamiki kaamiki",
     "terminal.integrated.rendererType": "canvas",
     "workbench.colorTheme": "Monokai",
     "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editorAssociations": [
+        {
+            "filenamePattern": "*.ipynb",
+            "viewType": "jupyter.notebook.ipynb"
+        }
+    ],
     "workbench.iconTheme": "material-icon-theme",
     "workbench.settings.editor": "json",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.tree.indent": 20,
-    "markdown.extension.toc.updateOnSave": false,
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    }
+    "workbench.tree.indent": 20
 }
