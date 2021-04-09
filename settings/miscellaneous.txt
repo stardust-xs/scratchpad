@@ -8,3 +8,4 @@ Installed extensions:
     Clipboard Manager
     Dash to Panel
     Places Status Indicator
+Fix logs from here: https://stackoverflow.com/questions/35638219/ubuntu-large-syslog-and-kern-log-files
