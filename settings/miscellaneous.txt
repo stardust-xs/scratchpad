@@ -1,5 +1,5 @@
 Must have installation of:
-install python3.9 python3.7 python3-pip transmission git rar p7zip-full curl gparted gnome-tweak-tool chrome-gnome-shell vlc usb-creator-gtk htop vim baobab
+install python3.9 python3-pip python3-venv transmission git rar p7zip-full curl gparted gnome-tweak-tool chrome-gnome-shell vlc usb-creator-gtk htop vim baobab
 
 To setup Tensorflow with GPU support: https://www.tensorflow.org/install/gpu
 To setup extensions: https://extensions.gnome.org/
