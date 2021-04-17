@@ -1,24 +1,28 @@
 # --- Personal preferences ---
-# To run password less sudo run:
+# Run password-less sudo:
 # sudo bash -c 'echo "$(logname) ALL=(ALL:ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)'
 
 # PS1 command to add line break so that the commands are typed on a new line:
+# Custom PS1:
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;92m\]\u\[\033[00m\]:\[\033[01;94m\]\w\[\033[00m\]\n\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;92m\]\u@\h\[\033[00m\]:\[\033[01;94m\]\w\[\033[00m\]\n\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u:\w\n\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\n\$ '
 fi
 unset color_prompt force_color_prompt
 
-# To setup virtual environments:
+# Setup virtual environments:
 # 1. Install virtualenv package: pip3 install virtualenv virtualenvwrapper --no-warn-script-location
 # 2. Create a virtualenv: mkvirtualenv <VENV NAME>
 # 3. Add the below 4 lines, you might wanna change your virtualenv base directory.
 #    If so, then update the first line `export WORKON_HOME=<YOUR DESIRED PATH>`
-export WORKON_HOME=$HOME/workshop/environments
+export WORKON_HOME=$HOME/workspace/environments
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
 source $HOME/.local/bin/virtualenvwrapper.sh
+
+# Setup GPG key:
+export GPG_TTY=$(tty)
 
 # XAlias definitions:
 # Add this at the end of your ~/.bashrc
